@@ -1,3 +1,4 @@
+-- جدول الطلاب
 CREATE TABLE Students (
     StudentID INT PRIMARY KEY,
     StudentName VARCHAR(100),
@@ -5,6 +6,7 @@ CREATE TABLE Students (
     Track VARCHAR(50)
 );
 
+-- جدول المواد
 CREATE TABLE Subjects (
     SubjectID INT PRIMARY KEY,
     SubjectName VARCHAR(100),
@@ -12,6 +14,7 @@ CREATE TABLE Subjects (
     Track VARCHAR(50)
 );
 
+-- جدول الدرجات
 CREATE TABLE Grades (
     GradeID INT IDENTITY(1,1) PRIMARY KEY,
     StudentID INT,
@@ -20,3 +23,4 @@ CREATE TABLE Grades (
     FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
     FOREIGN KEY (SubjectID) REFERENCES Subjects(SubjectID)
 );
+
